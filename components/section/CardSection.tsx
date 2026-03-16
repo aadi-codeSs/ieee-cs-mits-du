@@ -9,7 +9,7 @@ export const CardSection = () => {
         <Card
             logoSrc={earthlogo}
             headingText = "Student Branches"
-            descriptionText="There are thousands of IEEE Student Branch throughout the world and likely one near you. It's your connection to local professionals."
+            descriptionText="There are thousands of IEEE Student Branches throughout the world and likely one near you. It's your connection to local professionals."
             backgroundColor="#E1E5EA"
             headingColor="#00629B"
             descriptionColor="#333333"
