@@ -36,7 +36,7 @@ const LeadCard = ({ name, role, image, linkedin, github, index }: any) => {
 
   return (
     <motion.div
-      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)]"
+      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-[calc(50%-0.375rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)]"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
@@ -45,7 +45,7 @@ const LeadCard = ({ name, role, image, linkedin, github, index }: any) => {
     >
       <div className="absolute top-0 left-0 w-full h-1 bg-[#00629B] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-10"></div>
       
-      <div className="aspect-square relative overflow-hidden bg-gray-100">
+      <div className="aspect-[4/3] sm:aspect-square relative overflow-hidden bg-gray-100">
         {image ? (
           <img 
             src={image} 
@@ -55,22 +55,22 @@ const LeadCard = ({ name, role, image, linkedin, github, index }: any) => {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0A2A4A] to-[#00629B]">
-            <span className="text-4xl font-bold text-white transition-transform duration-500 group-hover:scale-110">{name.charAt(0)}</span>
+            <span className="text-2xl sm:text-4xl font-bold text-white transition-transform duration-500 group-hover:scale-110">{name.charAt(0)}</span>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A4A]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-[#0A2A4A] mb-1">{name}</h3>
-        <p className="text-[#00629B] font-medium">{role}</p>
+      <div className="p-3 sm:p-6">
+        <h3 className="text-sm sm:text-xl font-bold text-[#0A2A4A] mb-0.5 sm:mb-1 truncate">{name}</h3>
+        <p className="text-xs sm:text-base text-[#00629B] font-medium">{role}</p>
         
-        <div className="mt-4 pt-4 border-t border-gray-100 flex gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+        <div className="mt-2 sm:mt-4 pt-2 sm:pt-4 border-t border-gray-100 flex gap-3 sm:gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
           <a href={linkedin || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#00629B] transition-colors" aria-label="LinkedIn Profile">
-            <Linkedin size={22} />
+            <Linkedin size={18} />
           </a>
           <a href={github || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#00629B] transition-colors" aria-label="Github Profile">
-            <Github size={22} />
+            <Github size={18} />
           </a>
         </div>
       </div>
@@ -128,7 +128,7 @@ export const TeamLeadsSection = () => {
         </motion.div>
 
         {/* Leads Flex — centered */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-8">
           {leads.map((lead, index) => (
             <LeadCard key={index} {...lead} index={index} />
           ))}

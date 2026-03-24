@@ -36,7 +36,7 @@ const MemberCard = ({ name, branch, year, image, linkedin, github, index }: any)
 
   return (
     <motion.div
-      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] xl:w-[calc(25%-1.5rem)]"
+      className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-[calc(50%-0.375rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] xl:w-[calc(25%-1.5rem)]"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
@@ -45,7 +45,7 @@ const MemberCard = ({ name, branch, year, image, linkedin, github, index }: any)
     >
       <div className="absolute top-0 left-0 w-full h-1 bg-[#FFC72C] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-10"></div>
       
-      <div className="aspect-square relative overflow-hidden bg-gray-100">
+      <div className="aspect-[4/3] sm:aspect-square relative overflow-hidden bg-gray-100">
         {image ? (
           <img 
             src={image} 
@@ -55,36 +55,36 @@ const MemberCard = ({ name, branch, year, image, linkedin, github, index }: any)
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-200">
-            <span className="text-4xl font-bold text-[#0A2A4A] transition-transform duration-500 group-hover:scale-110">{name.charAt(0)}</span>
+            <span className="text-2xl sm:text-4xl font-bold text-[#0A2A4A] transition-transform duration-500 group-hover:scale-110">{name.charAt(0)}</span>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A4A]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-[#0A2A4A] mb-2">{name}</h3>
+      <div className="p-3 sm:p-6">
+        <h3 className="text-sm sm:text-xl font-bold text-[#0A2A4A] mb-1 sm:mb-2 truncate">{name}</h3>
         
         {(branch || year) && (
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
             {branch && (
-              <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wide uppercase rounded-full bg-[#00629B]/10 text-[#00629B]">
+              <span className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold tracking-wide uppercase rounded-full bg-[#00629B]/10 text-[#00629B]">
                 {branch}
               </span>
             )}
             {year && (
-              <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wide uppercase rounded-full bg-[#FFC72C]/20 text-[#0A2A4A]">
+              <span className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold tracking-wide uppercase rounded-full bg-[#FFC72C]/20 text-[#0A2A4A]">
                 {year}
               </span>
             )}
           </div>
         )}
         
-        <div className="mt-4 pt-4 border-t border-gray-100 flex gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+        <div className="mt-2 sm:mt-4 pt-2 sm:pt-4 border-t border-gray-100 flex gap-3 sm:gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
           <a href={linkedin || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#00629B] transition-colors" aria-label="LinkedIn Profile">
-            <Linkedin size={22} />
+            <Linkedin size={18} />
           </a>
           <a href={github || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A2A4A] transition-colors" aria-label="GitHub Profile">
-            <Github size={22} />
+            <Github size={18} />
           </a>
         </div>
       </div>
@@ -191,7 +191,7 @@ export const TeamMembersSection = () => {
               </motion.div>
               
               {/* Members Flex — centered last row */}
-              <div className="flex flex-wrap justify-center gap-8">
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-8">
                 {division.members.map((member, mIndex) => (
                   <MemberCard key={mIndex} {...member} index={mIndex} />
                 ))}
