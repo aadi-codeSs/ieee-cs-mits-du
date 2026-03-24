@@ -65,7 +65,7 @@ const LeadCard = ({ name, role, image, linkedin, github, index }: any) => {
         <h3 className="text-sm sm:text-xl font-bold text-[#0A2A4A] mb-0.5 sm:mb-1 truncate">{name}</h3>
         <p className="text-xs sm:text-base text-[#00629B] font-medium">{role}</p>
         
-        <div className="mt-2 sm:mt-4 pt-2 sm:pt-4 border-t border-gray-100 flex gap-3 sm:gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+        <div className="mt-2 sm:mt-4 pt-2 sm:pt-4 border-t border-gray-100 flex gap-3 sm:gap-4 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 sm:translate-y-2 sm:group-hover:translate-y-0 relative z-10">
           <a href={linkedin || '#'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#00629B] transition-colors" aria-label="LinkedIn Profile">
             <Linkedin size={18} />
           </a>
