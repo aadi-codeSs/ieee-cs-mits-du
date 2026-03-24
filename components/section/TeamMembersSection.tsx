@@ -45,7 +45,7 @@ const MemberCard = ({ name, branch, year, image, linkedin, github, index }: any)
     >
       <div className="absolute top-0 left-0 w-full h-1 bg-[#FFC72C] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-10"></div>
       
-      <div className="aspect-[4/3] sm:aspect-square relative overflow-hidden bg-gray-100">
+      <div className="aspect-square relative overflow-hidden bg-gray-100">
         {image ? (
           <img 
             src={image} 
@@ -186,7 +186,6 @@ export const TeamMembersSection = () => {
                 transition={{ duration: 0.4 }}
               >
                 <h3 className="text-3xl font-bold text-[#0A2A4A] mb-1">{division.name}</h3>
-                <span className="text-sm font-medium text-gray-400 tracking-wide">{division.members.length} members</span>
                 <div className="w-16 h-1 bg-[#FFC72C] mx-auto rounded-full mt-3"></div>
               </motion.div>
               

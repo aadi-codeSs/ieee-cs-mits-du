@@ -45,7 +45,7 @@ const LeadCard = ({ name, role, image, linkedin, github, index }: any) => {
     >
       <div className="absolute top-0 left-0 w-full h-1 bg-[#00629B] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-10"></div>
       
-      <div className="aspect-[4/3] sm:aspect-square relative overflow-hidden bg-gray-100">
+      <div className="aspect-square relative overflow-hidden bg-gray-100">
         {image ? (
           <img 
             src={image} 
