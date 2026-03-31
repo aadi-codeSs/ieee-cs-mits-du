@@ -37,7 +37,7 @@ export interface CardProps {
 // ─── Defaults ─────────────────────────────────────────────────────────────────
 
 const defaults = {
-  width: "280px",
+  width: "260px",
   height: "auto",
   backgroundColor: "#ffffff",
   border: "1px solid",

@@ -3,11 +3,11 @@ import Button from "../generic/Button";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A2A4A] text-white pt-[50px] flex flex-col items-center font-inter mt-[130px]">
+    <footer className="bg-[#0A2A4A] text-white pt-[30px] md:pt-[50px] flex flex-col items-center font-inter mt-[60px] md:mt-[130px]"> {/* CHANGED: responsive top padding and outer margin */}
       {/* Centered content container */}
       <div className="w-full max-w-[1200px] mx-auto px-6">
-        {/* Top section: 4 columns */}
-        <div className="grid grid-cols-4 gap-10 items-start">
+        {/* Top section: 4 columns — CHANGED: responsive grid (1 col mobile, 2 col tablet, 4 col desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 gap-y-8 items-start">
           {/* Column 1: About IEEE */}
           <div>
             <div className="font-inter text-[22px] font-[700] text-[#FFC72C] tracking-[-0.2] leading-[1]">
@@ -40,12 +40,14 @@ export default function Footer() {
 
           {/* Column 2: Contact Info */}
           <div>
-            <div className="font-inter text-[16px] font-[600] text-[#FFC72C] tracking-[-0.2] mt-[38px]">
+            {/* CHANGED: responsive top margin — smaller when stacked, original when side-by-side */}
+            <div className="font-inter text-[16px] font-[600] text-[#FFC72C] tracking-[-0.2] mt-[24px] lg:mt-[38px]">
               Contact Us
             </div>
             <ul className="list-none p-0 mt-[36px]">
               <li className="mb-[10px]">
-                <div className="font-inter mt-[24px] font-[400] text-[14px] tracking-[-0] leading-[1.6] text-[#ffffff]">
+                {/* CHANGED: break-words to prevent email overflow on small screens */}
+                <div className="font-inter mt-[24px] font-[400] text-[14px] tracking-[-0] leading-[1.6] text-[#ffffff] break-words">
                   Email: contact@ieee-cs.org
                 </div>
               </li>
@@ -66,7 +68,8 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div>
-            <div className="font-inter text-[16px] font-[600] text-[#FFC72C] tracking-[-0.2] mt-[38px]">
+            {/* CHANGED: responsive top margin */}
+            <div className="font-inter text-[16px] font-[600] text-[#FFC72C] tracking-[-0.2] mt-[24px] lg:mt-[38px]">
               Quick Links
             </div>
             <ul className="list-none p-0 mt-[36px]">
@@ -89,7 +92,8 @@ export default function Footer() {
 
           {/* Column 4: Social Media */}
           <div>
-            <div className="font-inter text-[16px] font-[600] text-[#FFC72C] tracking-[-0.2] mt-[38px]">
+            {/* CHANGED: responsive top margin */}
+            <div className="font-inter text-[16px] font-[600] text-[#FFC72C] tracking-[-0.2] mt-[24px] lg:mt-[38px]">
               Connect With Us
             </div>
             <div className="flex flex-col items-start mt-[18px]">
