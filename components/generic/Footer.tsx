@@ -3,7 +3,7 @@ import Button from "../generic/Button";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A2A4A] text-white pt-[30px] md:pt-[50px] flex flex-col items-center font-inter mt-[60px] md:mt-[130px]"> {/* CHANGED: responsive top padding and outer margin */}
+    <footer className="relative w-full z-10 bg-[#0A2A4A] text-white pt-[30px] md:pt-[50px] flex flex-col items-center font-inter mt-[60px] md:mt-[130px]"> {/* CHANGED: responsive top padding and outer margin */}
       {/* Centered content container */}
       <div className="w-full max-w-[1200px] mx-auto px-6">
         {/* Top section: 4 columns — CHANGED: responsive grid (1 col mobile, 2 col tablet, 4 col desktop) */}

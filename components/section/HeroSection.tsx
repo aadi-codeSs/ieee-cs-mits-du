@@ -26,7 +26,7 @@ export const HeroSection = () => {
                     <Image
                         src={heroImage}
                         alt="IEEE Computer Society — MITS Student Branch Chapter"
-                        height={50}
+                        height={295}
                         width={525}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 480px, 525px"
                         className="object-cover w-full h-auto
